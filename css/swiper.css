@@ -1,0 +1,100 @@
+.swiper {
+    height: 550px;
+    z-index: 0;
+  }
+  
+  
+  
+  .swiper-pagination-bullet{ background-color: var(--color-text);}
+  .swiper-pagination-bullet-active{ background-color: var(--secondary-color); border: solid 1px var(--color-text)}
+  .swiper-button-next, .swiper-button-prev {color: var(--secondary-color);}
+  
+  
+  
+  .swiper-slide{
+    width: 280px !important;
+    height: 450px;
+    perspective: 1000px;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+  }
+
+  /* pages rpésentation des appli back */
+  .img-presentation {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    border: solid 2px var(--secondary-color);
+  }
+
+  .projet-img { 
+    width: 100%;
+    height: 120px;
+  }
+  
+  .projet-img img { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+  
+  .card-bottom {font-size: var(--font-size-p); padding: 16px 0;}
+  
+  .flip-card{
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    padding: 32px 0 16px 0;
+    background: rgba(37, 137, 182, 0.6);
+    border-radius: 5px;
+    /*box-shadow: var(--shadow-card);*/
+    border: solid 2px var(--color-text);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-front {
+    border-radius: 10px;
+    transform: rotateY(0deg);
+  }
+  
+  .card-back {
+    border-radius: 10px;
+    transform: rotateY(180deg);
+  }
+  
+  .cta-card{
+    font-weight: bolder;
+    font-size: 32px;
+  }
+
+  @media screen and (max-width: 620px) {
+    .projet-container {
+      gap: 32px;
+    }
+    .swiper {
+      height: 520px;
+    }
+    .swiper-slide {
+      height: 420px;
+    }
+    .card-back, .card-front {padding: 16px 0;}
+  }
